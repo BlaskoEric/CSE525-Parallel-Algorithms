@@ -1,0 +1,40 @@
+Script started on 2019-06-12 07:42:19-07:00
+]0;005670557@csusb.edu@jb359-1:~/cse525/final[005670557@csusb.edu@jb359-1 final]$ nvcc -o reduction reduction.cu
+]0;005670557@csusb.edu@jb359-1:~/cse525/final[005670557@csusb.edu@jb359-1 final]$ ./reduction
+
+Enter the number of blocks (power of 2): 1
+Using 1 block(s) of 1024 threads
+Result from Reduction
+Sum of 1-1024 =  524800.00
+
+]0;005670557@csusb.edu@jb359-1:~/cse525/final[005670557@csusb.edu@jb359-1 final]$ ./reduction
+
+Enter the number of blocks (power of 2): 2
+Using 2 block(s) of 512 threads
+Result from Reduction
+Sum of 1-1024 =  524800.00
+
+]0;005670557@csusb.edu@jb359-1:~/cse525/final[005670557@csusb.edu@jb359-1 final]$ ./reduction
+
+Enter the number of blocks (power of 2): 4
+Using 4 block(s) of 256 threads
+Result from Reduction
+Sum of 1-1024 =  524800.00
+
+]0;005670557@csusb.edu@jb359-1:~/cse525/final[005670557@csusb.edu@jb359-1 final]$ ./reduction
+
+Enter the number of blocks (power of 2): 256
+Using 256 block(s) of 4 threads
+Result from Reduction
+Sum of 1-1024 =  524800.00
+
+]0;005670557@csusb.edu@jb359-1:~/cse525/final[005670557@csusb.edu@jb359-1 final]$ ./reduction
+
+Enter the number of blocks (power of 2): 512
+Using 512 block(s) of 2 threads
+Result from Reduction
+Sum of 1-1024 =  524800.00
+
+]0;005670557@csusb.edu@jb359-1:~/cse525/final[005670557@csusb.edu@jb359-1 final]$ exit
+
+Script done on 2019-06-12 07:43:10-07:00

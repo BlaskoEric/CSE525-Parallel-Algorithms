@@ -1,0 +1,77 @@
+Script started on 2019-05-11 16:07:06-07:00
+]0;005670557@csusb.edu@jb358-1:~/cse525[005670557@csusb.edu@jb358-1 cse525]$ mpicc -o allRed allRed.c
+]0;005670557@csusb.edu@jb358-1:~/cse525[005670557@csusb.edu@jb358-1 cse525]$ mpirun -np 4 -oversubscribe -hostfile myhost0_2 allRed
+proc: 0 - local value: 4
+proc: 2 - local value: 13
+proc: 3 - local value: 23
+proc: 1 - local value: 45
+Processor: 3: sum = 85
+Processor: 2: sum = 85
+Processor: 0: sum = 85
+Processor: 1: sum = 85
+]0;005670557@csusb.edu@jb358-1:~/cse525[005670557@csusb.edu@jb358-1 cse525]$ mpirun -np 8 -oversubscribe -hostfile myhost0_2 allRed
+proc: 5 - local value: 49
+proc: 6 - local value: 5
+proc: 7 - local value: 44
+proc: 4 - local value: 13
+proc: 2 - local value: 19
+proc: 3 - local value: 23
+proc: 1 - local value: 39
+proc: 0 - local value: 40
+Processor: 7: sum = 232
+Processor: 5: sum = 232
+Processor: 6: sum = 232
+Processor: 4: sum = 232
+Processor: 3: sum = 232
+Processor: 2: sum = 232
+Processor: 0: sum = 232
+Processor: 1: sum = 232
+]0;005670557@csusb.edu@jb358-1:~/cse525[005670557@csusb.edu@jb358-1 cse525]$ mpirun -np 16 -oversubscribe -hostfile myhost0_2 allRed
+proc: 8 - local value: 24
+proc: 9 - local value: 28
+proc: 6 - local value: 40
+proc: 10 - local value: 46
+proc: 7 - local value: 9
+proc: 0 - local value: 8
+proc: 4 - local value: 15
+proc: 1 - local value: 45
+proc: 3 - local value: 32
+proc: 11 - local value: 9
+proc: 5 - local value: 43
+proc: 13 - local value: 45
+proc: 14 - local value: 6
+proc: 15 - local value: 5
+proc: 12 - local value: 11
+proc: 2 - local value: 25
+Processor: 10: sum = 391
+Processor: 8: sum = 391
+Processor: 9: sum = 391
+Processor: 15: sum = 391
+Processor: 13: sum = 391
+Processor: 14: sum = 391
+Processor: 12: sum = 391
+Processor: 11: sum = 391
+Processor: 7: sum = 391
+Processor: 6: sum = 391
+Processor: 0: sum = 391
+Processor: 2: sum = 391
+Processor: 1: sum = 391
+Processor: 3: sum = 391
+Processor: 4: sum = 391
+Processor: 5: sum = 391
+]0;005670557@csusb.edu@jb358-1:~/cse525[005670557@csusb.edu@jb358-1 cse525]$ mpirun -np 6 -oversubscribe -hostfile myhost0_2 allRed
+proc: 5 - local value: 21
+proc: 4 - local value: 0
+proc: 0 - local value: 18
+proc: 1 - local value: 7
+proc: 3 - local value: 40
+proc: 2 - local value: 0
+Processor: 5: sum = 46
+Processor: 4: sum = 46
+Processor: 0: sum = 86
+Processor: 3: sum = 86
+Processor: 1: sum = 86
+Processor: 2: sum = 86
+]0;005670557@csusb.edu@jb358-1:~/cse525[005670557@csusb.edu@jb358-1 cse525]$ exit
+
+Script done on 2019-05-11 16:08:56-07:00

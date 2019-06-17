@@ -1,0 +1,58 @@
+Script started on 2019-04-30 12:07:21-07:00
+]0;005670557@csusb.edu@jb359-1:~/cse525[005670557@csusb.edu@jb359-1 cse525]$ mpicc -lm -o reduction reduction.c
+]0;005670557@csusb.edu@jb359-1:~/cse525[005670557@csusb.edu@jb359-1 cse525]$ mpirun -oversubscribe -np 5 -hostfile myhost0_2 reduction 0
+proc: 4 - local value: 4
+proc: 0 - local value: 0
+proc: 3 - local value: 3
+proc: 1 - local value: 1
+proc: 2 - local value: 2
+
+*******************************
+*     Reduction Complete      *
+* Process 0 has the sum of 10 *
+*******************************
+]0;005670557@csusb.edu@jb359-1:~/cse525[005670557@csusb.edu@jb359-1 cse525]$ mpirun -oversubscribe -np 8 -hostfile myhost0_2 reduction 2
+proc: 0 - local value: 0
+proc: 4 - local value: 4
+proc: 1 - local value: 1
+proc: 5 - local value: 5
+proc: 3 - local value: 3
+proc: 6 - local value: 6
+proc: 2 - local value: 2
+proc: 7 - local value: 7
+
+*******************************
+*     Reduction Complete      *
+* Process 2 has the sum of 28 *
+*******************************
+]0;005670557@csusb.edu@jb359-1:~/cse525[005670557@csusb.edu@jb359-1 cse525]$ mpirun -oversubscribe -np 9 -hostfile myhost0)[K_2 reduction 8
+proc: 8 - local value: 8
+proc: 4 - local value: 4
+proc: 3 - local value: 3
+proc: 5 - local value: 5
+proc: 1 - local value: 1
+proc: 7 - local value: 7
+proc: 0 - local value: 0
+proc: 6 - local value: 6
+proc: 2 - local value: 2
+
+*******************************
+*     Reduction Complete      *
+* Process 8 has the sum of 36 *
+*******************************
+]0;005670557@csusb.edu@jb359-1:~/cse525[005670557@csusb.edu@jb359-1 cse525]$ mpirun -oversubscribe -np 9 -hostfile myhost0_2 reduction 8[K9
+root is greater than processors
+-------------------------------------------------------
+Primary job  terminated normally, but 1 process returned
+a non-zero exit code.. Per user-direction, the job has been aborted.
+-------------------------------------------------------
+--------------------------------------------------------------------------
+mpirun detected that one or more processes exited with non-zero status, thus causing
+the job to be terminated. The first process to do so was:
+
+  Process name: [[45572,1],4]
+  Exit code:    1
+--------------------------------------------------------------------------
+]0;005670557@csusb.edu@jb359-1:~/cse525[005670557@csusb.edu@jb359-1 cse525]$ exit
+
+Script done on 2019-04-30 12:09:57-07:00
